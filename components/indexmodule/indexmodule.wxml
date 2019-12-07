@@ -1,0 +1,10 @@
+<!--components/indexmodule/indexmodule.wxml-->
+<view class="module-group">
+  <view class="module-top">
+    <view class="module-title">{{title}}</view>
+    <navigator open-type="navigateTo" url="{{moreurl}}" class="module-more">更多</navigator>
+  </view>
+  <scroll-view class="mudule-scroll-view" scroll-x="{{true}}">
+    <itemview itemurl="/pages/detail/detail?type={{type}}&id={{item.id}}" wx:for="{{items}}" wx:key="title" item="{{item}}"></itemview>
+  </scroll-view>
+</view>
